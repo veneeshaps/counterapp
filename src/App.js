@@ -41,7 +41,7 @@ const Counter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/counter');
+      const response = await axios.get('https://counter-backend-4.onrender.com/api/counter');
       dispatch({ type: 'SET', count: response.data.count,myCounter:response.data.myCount });
     } catch (err) {
       console.error(err);
@@ -54,7 +54,7 @@ const Counter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/increment');
+      await axios.post('https://counter-backend-4.onrender.com/api/counter/increment');
       dispatch({ type: 'INCREMENT' });
     } catch (err) {
       console.error(err);
@@ -63,7 +63,7 @@ const Counter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/counter/decrement');
+      await axios.post('https://counter-backend-4.onrender.com/api/counter/decrement');
       dispatch({ type: 'DECREMENT' });
     } catch (err) {
       console.error(err);
@@ -88,7 +88,7 @@ const MyCounter = () => {
 
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/counter');
+      const response = await axios.get('https://counter-backend-4.onrender.com/api/counter');
       dispatch({ type: 'SET', count: response.data.count,myCounter:response.data.myCount });
     } catch (err) {
       console.error(err);
@@ -101,7 +101,7 @@ const MyCounter = () => {
 
   const incrementCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/myCounter/increment');
+      await axios.post('https://counter-backend-4.onrender.com/api/myCounter/increment');
       dispatch({ type: 'INCREMENT_MY_COUNTER' });
     } catch (err) {
       console.error(err);
@@ -110,7 +110,7 @@ const MyCounter = () => {
 
   const decrementCounter = useCallback(async () => {
     try {
-      await axios.post('http://localhost:5000/api/myCounter/decrement');
+      await axios.post('https://counter-backend-4.onrender.com/api/myCounter/decrement');
       dispatch({ type: 'DECREMENT_MY_COUNTER' });
     } catch (err) {
       console.error(err);
@@ -132,7 +132,7 @@ const App = () => {
   const [state, dispatch] = useReducer(counterReducer, { count: 0, myCounter: 0 });
   const fetchCounter = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/counter');
+      const response = await axios.get('https://counter-backend-4.onrender.com/api/counter');
       dispatch({ type: 'SET', count: response.data.count,myCounter:response.data.myCount });
     } catch (err) {
       console.error(err);
